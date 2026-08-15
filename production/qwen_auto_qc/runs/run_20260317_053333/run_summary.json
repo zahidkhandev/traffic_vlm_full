@@ -1,0 +1,29 @@
+{
+  "run_id": "run_20260317_053333",
+  "total_samples": 64,
+  "flagged_samples": 0,
+  "error_rate": 0.0,
+  "mean_latency_ms": 66650.08381406247,
+  "thresholds": {
+    "pedestrian": 0.0,
+    "rider": 0.0,
+    "car": 0.0,
+    "truck": 0.0,
+    "bus": 0.0,
+    "train": 0.0,
+    "motorcycle": 0.0,
+    "bicycle": 0.0,
+    "traffic light": 0.0,
+    "traffic sign": 0.0
+  },
+  "metrics": {
+    "total_samples": 64.0,
+    "flagged_samples": 0.0,
+    "error_rate": 0.0,
+    "mean_latency_ms": 66650.08381406247
+  },
+  "artifact_paths": {
+    "all_samples": "runs\\run_20260317_053333\\all_samples.parquet",
+    "flagged_samples": "runs\\run_20260317_053333\\flagged_samples.parquet"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "total_samples": 64.0,
+  "flagged_samples": 4.0,
+  "error_rate": 0.0625,
+  "mean_latency_ms": 68188.51562500003
+}

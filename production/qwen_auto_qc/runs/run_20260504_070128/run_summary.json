@@ -1,0 +1,25 @@
+{
+  "run_id": "run_20260504_070128",
+  "total_samples": 0,
+  "flagged_samples": 0,
+  "error_rate": 0.0,
+  "mean_latency_ms": 0.0,
+  "thresholds": {},
+  "metrics": {
+    "total_samples": 0.0,
+    "flagged_samples": 0.0,
+    "error_rate": 0.0,
+    "mean_latency_ms": 0.0,
+    "macro_precision": 0.0,
+    "macro_recall": 0.0
+  },
+  "artifact_paths": {
+    "all_samples": "runs\\run_20260504_070128\\all_samples.parquet",
+    "flagged_samples": "runs\\run_20260504_070128\\flagged_samples.parquet",
+    "run_log": "runs\\run_20260504_070128\\run.log",
+    "all_samples_csv": "runs\\run_20260504_070128\\tables\\all_samples.csv",
+    "flagged_samples_csv": "runs\\run_20260504_070128\\tables\\flagged_samples.csv",
+    "class_summary_csv": "runs\\run_20260504_070128\\tables\\class_summary.csv",
+    "confusion_matrix_csv": "runs\\run_20260504_070128\\tables\\confusion_matrix.csv"
+  }
+}

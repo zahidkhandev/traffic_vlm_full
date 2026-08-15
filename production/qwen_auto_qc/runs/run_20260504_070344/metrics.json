@@ -1,0 +1,8 @@
+{
+  "total_samples": 8.0,
+  "flagged_samples": 7.0,
+  "error_rate": 0.875,
+  "mean_latency_ms": 62016.09035000001,
+  "macro_precision": 0.3333333333333333,
+  "macro_recall": 0.05555555555555555
+}

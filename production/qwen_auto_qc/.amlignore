@@ -1,0 +1,30 @@
+# Git / CI
+.git/
+.github/
+azure_devops/
+
+# Python caches / local env
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Local outputs / artifacts
+mlruns/
+runs/
+test_output/
+pytest_tmp/
+tmp_training_plan_unzip/
+checkpoints/
+
+# Local data/models (Azure ML data assets are used instead)
+data/
+models/
+
+# Docs and misc
+docs/
+*.log
+.env
+.env.*

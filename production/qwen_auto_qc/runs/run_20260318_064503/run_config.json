@@ -1,0 +1,42 @@
+{
+  "model_path": "models/qwen-vl-4b",
+  "images_path": "data/raw/mini/images/test",
+  "labels_path": "data/raw/mini/labels/test",
+  "output_root": "runs",
+  "checkpoint_root": "checkpoints",
+  "device": "auto",
+  "torch_dtype": "auto",
+  "max_samples": 5,
+  "checkpoint_every": 5,
+  "min_box_size": 10,
+  "debug": false,
+  "console_log_each_object": true,
+  "save_debug_images": false,
+  "use_grounding": true,
+  "inference_mode": "without_red_rectangle",
+  "experiment_modes": [],
+  "class_names": [
+    "pedestrian",
+    "rider",
+    "car",
+    "truck",
+    "bus",
+    "train",
+    "motorcycle",
+    "bicycle",
+    "traffic light",
+    "traffic sign"
+  ],
+  "thresholds": {},
+  "benchmark_warmup": 1,
+  "benchmark_steps": 3,
+  "mlflow": {
+    "enabled": false,
+    "tracking_uri": "file:./mlruns",
+    "experiment_name": "qwen_auto_qc",
+    "run_name": null,
+    "tags": {
+      "algorithm": "qwen_full_image_grounding"
+    }
+  }
+}

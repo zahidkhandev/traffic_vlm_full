@@ -1,0 +1,52 @@
+{
+  "run_id": "run_20260504_070128",
+  "created_at_utc": "2026-05-04T07:01:28.237587+00:00",
+  "config_hash": "3273100fdd1010587fd3f2af286bb775dc80e83293d0d9c8b503e7c1aa078661",
+  "previous_run_id": "run_20260504_064653",
+  "changed_config_keys": [
+    "checkpoint_every",
+    "max_error_crops",
+    "max_samples",
+    "max_verification_images",
+    "mlflow.tags.platform"
+  ],
+  "config_changes": {
+    "checkpoint_every": {
+      "current": 1,
+      "previous": 3
+    },
+    "max_error_crops": {
+      "current": 100,
+      "previous": 20
+    },
+    "max_samples": {
+      "current": 1,
+      "previous": 3
+    },
+    "max_verification_images": {
+      "current": 25,
+      "previous": 10
+    },
+    "mlflow.tags.platform": {
+      "current": "local",
+      "previous": "local-mini2"
+    }
+  },
+  "metrics": {
+    "total_samples": 0.0,
+    "flagged_samples": 0.0,
+    "error_rate": 0.0,
+    "mean_latency_ms": 0.0,
+    "macro_precision": 0.0,
+    "macro_recall": 0.0
+  },
+  "artifact_paths": {
+    "all_samples": "runs\\run_20260504_070128\\all_samples.parquet",
+    "flagged_samples": "runs\\run_20260504_070128\\flagged_samples.parquet",
+    "run_log": "runs\\run_20260504_070128\\run.log",
+    "all_samples_csv": "runs\\run_20260504_070128\\tables\\all_samples.csv",
+    "flagged_samples_csv": "runs\\run_20260504_070128\\tables\\flagged_samples.csv",
+    "class_summary_csv": "runs\\run_20260504_070128\\tables\\class_summary.csv",
+    "confusion_matrix_csv": "runs\\run_20260504_070128\\tables\\confusion_matrix.csv"
+  }
+}

@@ -1,0 +1,20 @@
+﻿name: qwen-auto-qc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip=24.3.1
+  - setuptools<81
+  - wheel
+  - pip:
+      - torch==2.4.1
+      - torchvision==0.19.1
+      - numpy>=1.26
+      - pandas
+      - pillow
+      - transformers
+      - tqdm
+      - pyyaml
+      - pyarrow
+      - mlflow==2.14.3
+      - azureml-mlflow==1.62.0.post2

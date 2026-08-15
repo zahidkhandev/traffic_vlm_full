@@ -1,0 +1,75 @@
+{
+  "run_id": "run_20260318_064503",
+  "created_at_utc": "2026-03-18T07:48:14.808087+00:00",
+  "config_hash": "149faac5cd11a91020982c8c3fd1d6e78a3faa2a678756f003c9ad88cdb2ceda",
+  "previous_run_id": "run_20260317_053333",
+  "changed_config_keys": [
+    "console_log_each_object",
+    "thresholds.bicycle",
+    "thresholds.bus",
+    "thresholds.car",
+    "thresholds.motorcycle",
+    "thresholds.pedestrian",
+    "thresholds.rider",
+    "thresholds.traffic light",
+    "thresholds.traffic sign",
+    "thresholds.train",
+    "thresholds.truck"
+  ],
+  "config_changes": {
+    "console_log_each_object": {
+      "current": true,
+      "previous": null
+    },
+    "thresholds.bicycle": {
+      "current": null,
+      "previous": 0.0
+    },
+    "thresholds.bus": {
+      "current": null,
+      "previous": 0.0
+    },
+    "thresholds.car": {
+      "current": null,
+      "previous": 0.0
+    },
+    "thresholds.motorcycle": {
+      "current": null,
+      "previous": 0.0
+    },
+    "thresholds.pedestrian": {
+      "current": null,
+      "previous": 0.0
+    },
+    "thresholds.rider": {
+      "current": null,
+      "previous": 0.0
+    },
+    "thresholds.traffic light": {
+      "current": null,
+      "previous": 0.0
+    },
+    "thresholds.traffic sign": {
+      "current": null,
+      "previous": 0.0
+    },
+    "thresholds.train": {
+      "current": null,
+      "previous": 0.0
+    },
+    "thresholds.truck": {
+      "current": null,
+      "previous": 0.0
+    }
+  },
+  "metrics": {
+    "total_samples": 64.0,
+    "flagged_samples": 4.0,
+    "error_rate": 0.0625,
+    "mean_latency_ms": 59079.66383281247
+  },
+  "artifact_paths": {
+    "all_samples": "runs\\run_20260318_064503\\all_samples.parquet",
+    "flagged_samples": "runs\\run_20260318_064503\\flagged_samples.parquet"
+  }
+}

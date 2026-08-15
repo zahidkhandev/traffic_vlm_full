@@ -1,0 +1,25 @@
+{
+  "run_id": "run_20260515_064556",
+  "created_at_utc": "2026-05-15T06:45:56.730263+00:00",
+  "config_hash": "086ea6422845c08044cd7b8b097c6198cf76b9d725913fff026a84af095bd393",
+  "previous_run_id": null,
+  "changed_config_keys": [],
+  "config_changes": {},
+  "metrics": {
+    "total_samples": 1.0,
+    "flagged_samples": 1.0,
+    "error_rate": 1.0,
+    "mean_latency_ms": 5.0,
+    "macro_precision": 0.0,
+    "macro_recall": 0.0
+  },
+  "artifact_paths": {
+    "all_samples": "test_output\\runs\\run_20260515_064556\\all_samples.parquet",
+    "flagged_samples": "test_output\\runs\\run_20260515_064556\\flagged_samples.parquet",
+    "run_log": "test_output\\runs\\run_20260515_064556\\run.log",
+    "all_samples_csv": "test_output\\runs\\run_20260515_064556\\tables\\all_samples.csv",
+    "flagged_samples_csv": "test_output\\runs\\run_20260515_064556\\tables\\flagged_samples.csv",
+    "class_summary_csv": "test_output\\runs\\run_20260515_064556\\tables\\class_summary.csv",
+    "confusion_matrix_csv": "test_output\\runs\\run_20260515_064556\\tables\\confusion_matrix.csv"
+  }
+}

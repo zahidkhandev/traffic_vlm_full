@@ -1,0 +1,4 @@
+{"event": "run_start", "run_id": "run_20260515_064556", "sample_count": 1, "inference_mode": "without_red_rectangle"}
+{"event": "object_inference", "index": 1, "sample_idx": 0, "image_id": "sample", "image": "sample.jpg", "obj_id": 1, "box": [0, 0, 20, 20], "gt_label": "car", "pred_label": "truck", "pred_confidence": 0.9, "latency_ms": 5.0}
+{"event": "object_decision", "index": 1, "sample_idx": 0, "image_id": "sample", "image": "sample.jpg", "obj_id": 1, "box": [0, 0, 20, 20], "gt_label": "car", "pred_label": "truck", "self_confidence": 0.1, "pred_confidence": 0.9, "threshold": 0.2, "margin": 0.8, "normalized_margin": 0.888888888888889, "latency_ms": 5.0, "is_error": true, "reason_code": "mismatch_low_self_confidence"}
+{"event": "run_summary", "run_id": "run_20260515_064556", "total_samples": 1, "flagged_samples": 1, "error_rate": 1.0, "mean_latency_ms": 5.0}

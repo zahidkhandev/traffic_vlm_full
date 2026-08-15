@@ -1,0 +1,11 @@
+given_label,predicted_label,samples,flagged
+car,traffic light,23,1
+car,car,16,0
+car,pedestrian,4,0
+rider,pedestrian,1,1
+traffic light,traffic light,7,0
+traffic sign,traffic light,7,0
+traffic sign,car,2,0
+traffic sign,pedestrian,2,1
+truck,car,1,0
+truck,traffic light,1,1

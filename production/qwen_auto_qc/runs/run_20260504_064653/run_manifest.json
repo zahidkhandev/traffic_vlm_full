@@ -1,0 +1,77 @@
+{
+  "run_id": "run_20260504_064653",
+  "created_at_utc": "2026-05-04T06:46:53.876536+00:00",
+  "config_hash": "fb0bfcfe46dc8f3cb6c857498dbc1e1db6fc90ca6f362cebc8a2033cc16aede6",
+  "previous_run_id": "run_20260401_090608",
+  "changed_config_keys": [
+    "checkpoint_every",
+    "images_path",
+    "labels_path",
+    "max_error_crops",
+    "max_samples",
+    "max_verification_images",
+    "mlflow.enabled",
+    "mlflow.tags.platform",
+    "mlflow.tracking_uri",
+    "model_path"
+  ],
+  "config_changes": {
+    "checkpoint_every": {
+      "current": 3,
+      "previous": 5
+    },
+    "images_path": {
+      "current": ".\\data\\raw\\mini\\images\\test",
+      "previous": "data/raw/mini/images/test"
+    },
+    "labels_path": {
+      "current": ".\\data\\raw\\mini\\labels\\test",
+      "previous": "data/raw/mini/labels/test"
+    },
+    "max_error_crops": {
+      "current": 20,
+      "previous": 100
+    },
+    "max_samples": {
+      "current": 3,
+      "previous": 5
+    },
+    "max_verification_images": {
+      "current": 10,
+      "previous": 25
+    },
+    "mlflow.enabled": {
+      "current": false,
+      "previous": true
+    },
+    "mlflow.tags.platform": {
+      "current": "local-mini2",
+      "previous": "local"
+    },
+    "mlflow.tracking_uri": {
+      "current": "",
+      "previous": "file:./mlruns"
+    },
+    "model_path": {
+      "current": ".\\models\\qwen-vl-4b",
+      "previous": "models/qwen-vl-4b"
+    }
+  },
+  "metrics": {
+    "total_samples": 0.0,
+    "flagged_samples": 0.0,
+    "error_rate": 0.0,
+    "mean_latency_ms": 0.0,
+    "macro_precision": 0.0,
+    "macro_recall": 0.0
+  },
+  "artifact_paths": {
+    "all_samples": "runs\\run_20260504_064653\\all_samples.parquet",
+    "flagged_samples": "runs\\run_20260504_064653\\flagged_samples.parquet",
+    "run_log": "runs\\run_20260504_064653\\run.log",
+    "all_samples_csv": "runs\\run_20260504_064653\\tables\\all_samples.csv",
+    "flagged_samples_csv": "runs\\run_20260504_064653\\tables\\flagged_samples.csv",
+    "class_summary_csv": "runs\\run_20260504_064653\\tables\\class_summary.csv",
+    "confusion_matrix_csv": "runs\\run_20260504_064653\\tables\\confusion_matrix.csv"
+  }
+}

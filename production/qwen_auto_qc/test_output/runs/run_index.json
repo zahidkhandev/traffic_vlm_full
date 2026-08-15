@@ -1,0 +1,11 @@
+[
+  {
+    "run_id": "run_20260515_064556",
+    "run_dir": "test_output\\runs\\run_20260515_064556",
+    "inference_mode": "without_red_rectangle",
+    "total_samples": 1,
+    "flagged_samples": 1,
+    "error_rate": 1.0,
+    "mean_latency_ms": 5.0
+  }
+]

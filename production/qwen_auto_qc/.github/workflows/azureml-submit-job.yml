@@ -1,0 +1,36 @@
+name: AzureML Submit Job
+
+on:
+  workflow_dispatch:
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    env:
+      AZURE_RESOURCE_GROUP: ${{ vars.AZURE_RESOURCE_GROUP }}
+      AZURE_ML_WORKSPACE: ${{ vars.AZURE_ML_WORKSPACE }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Azure Login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Submit AzureML command job
+        shell: bash
+        run: |
+          set -euo pipefail
+          az extension add -n ml -y
+          MLFLOW_URI="$(az ml workspace show --resource-group "$AZURE_RESOURCE_GROUP" --name "$AZURE_ML_WORKSPACE" --query mlflow_tracking_uri -o tsv)"
+          az ml job create \
+            --resource-group "$AZURE_RESOURCE_GROUP" \
+            --workspace-name "$AZURE_ML_WORKSPACE" \
+            --file configs/azureml_job.yaml \
+            --set environment_variables.MLFLOW_TRACKING_URI="$MLFLOW_URI"

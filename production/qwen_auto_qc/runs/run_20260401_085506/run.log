@@ -1,0 +1,2 @@
+{"event": "run_start", "run_id": "run_20260401_085506", "sample_count": 64, "inference_mode": "without_red_rectangle"}
+{"event": "object_inference", "index": 1, "sample_idx": 0, "image_id": "cabc30fc-e7726578", "image": "cabc30fc-e7726578.jpg", "obj_id": 0, "box": [574, 376, 600, 415], "gt_label": "traffic sign", "pred_label": "traffic light", "pred_confidence": 0.838865339756012, "latency_ms": 66450.66559999998}

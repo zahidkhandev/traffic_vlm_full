@@ -1,0 +1,2 @@
+given_label,total_samples,flagged_samples,mean_self_confidence,mean_latency_ms,error_rate
+car,1,1,0.1,5.0,1.0

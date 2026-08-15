@@ -1,0 +1,25 @@
+{
+  "run_id": "run_20260401_090608",
+  "created_at_utc": "2026-04-01T10:16:30.544163+00:00",
+  "config_hash": "5be513f1cecc070039043142bd1dc191cc623863241ed964a7887bc72ce1e6dc",
+  "previous_run_id": "run_20260401_085506",
+  "changed_config_keys": [],
+  "config_changes": {},
+  "metrics": {
+    "total_samples": 64.0,
+    "flagged_samples": 37.0,
+    "error_rate": 0.578125,
+    "mean_latency_ms": 65846.09363906251
+  },
+  "artifact_paths": {
+    "all_samples": "runs\\run_20260401_090608\\all_samples.parquet",
+    "flagged_samples": "runs\\run_20260401_090608\\flagged_samples.parquet",
+    "run_log": "runs\\run_20260401_090608\\run.log",
+    "all_samples_csv": "runs\\run_20260401_090608\\tables\\all_samples.csv",
+    "flagged_samples_csv": "runs\\run_20260401_090608\\tables\\flagged_samples.csv",
+    "class_summary_csv": "runs\\run_20260401_090608\\tables\\class_summary.csv",
+    "confusion_matrix_csv": "runs\\run_20260401_090608\\tables\\confusion_matrix.csv",
+    "annotation_verifications": "runs\\run_20260401_090608\\annotation_verifications",
+    "label_errors_to_verify": "runs\\run_20260401_090608\\label_errors_to_verify"
+  }
+}

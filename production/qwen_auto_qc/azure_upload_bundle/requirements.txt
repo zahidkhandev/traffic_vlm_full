@@ -1,0 +1,17 @@
+torch>=2.2
+numpy>=1.26
+pandas>=2.2
+pillow>=10.3
+transformers>=4.42
+tqdm>=4.66
+pyyaml>=6.0
+pyarrow>=16.0
+mlflow>=2.14
+azure-ai-ml>=1.17
+azure-identity>=1.17
+pytest>=8.2
+pytest-cov>=5.0
+mypy>=1.10
+ruff>=0.5
+pylint>=3.2
+types-PyYAML>=6.0.12

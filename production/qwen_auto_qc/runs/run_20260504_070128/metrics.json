@@ -1,0 +1,8 @@
+{
+  "total_samples": 0.0,
+  "flagged_samples": 0.0,
+  "error_rate": 0.0,
+  "mean_latency_ms": 0.0,
+  "macro_precision": 0.0,
+  "macro_recall": 0.0
+}

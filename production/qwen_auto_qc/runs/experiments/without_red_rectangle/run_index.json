@@ -1,0 +1,11 @@
+[
+  {
+    "run_id": "run_20260316_095526",
+    "run_dir": "runs\\experiments\\without_red_rectangle\\run_20260316_095526",
+    "inference_mode": "without_red_rectangle",
+    "total_samples": 16,
+    "flagged_samples": 0,
+    "error_rate": 0.0,
+    "mean_latency_ms": 62619.818575000405
+  }
+]

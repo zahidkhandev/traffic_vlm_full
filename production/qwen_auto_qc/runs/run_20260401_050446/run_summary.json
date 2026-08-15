@@ -1,0 +1,31 @@
+{
+  "run_id": "run_20260401_050446",
+  "total_samples": 64,
+  "flagged_samples": 4,
+  "error_rate": 0.0625,
+  "mean_latency_ms": 68188.51562500003,
+  "thresholds": {
+    "traffic sign": 4.560666184261208e-06,
+    "car": 0.0005896103102713823,
+    "truck": 0.0076761068776249886,
+    "rider": 0.22196155786514282,
+    "traffic light": 0.9944201111793518
+  },
+  "metrics": {
+    "total_samples": 64.0,
+    "flagged_samples": 4.0,
+    "error_rate": 0.0625,
+    "mean_latency_ms": 68188.51562500003
+  },
+  "artifact_paths": {
+    "all_samples": "runs\\run_20260401_050446\\all_samples.parquet",
+    "flagged_samples": "runs\\run_20260401_050446\\flagged_samples.parquet",
+    "run_log": "runs\\run_20260401_050446\\run.log",
+    "all_samples_csv": "runs\\run_20260401_050446\\tables\\all_samples.csv",
+    "flagged_samples_csv": "runs\\run_20260401_050446\\tables\\flagged_samples.csv",
+    "class_summary_csv": "runs\\run_20260401_050446\\tables\\class_summary.csv",
+    "confusion_matrix_csv": "runs\\run_20260401_050446\\tables\\confusion_matrix.csv",
+    "annotation_verifications": "runs\\run_20260401_050446\\annotation_verifications",
+    "label_errors_to_verify": "runs\\run_20260401_050446\\label_errors_to_verify"
+  }
+}

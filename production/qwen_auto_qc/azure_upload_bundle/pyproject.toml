@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qwen-auto-qc"
+version = "0.1.0"
+description = "Production-oriented AutoQC pipeline built on Qwen3-VL grounding prompts."
+readme = "README.md"
+requires-python = "==3.11.*"
+dependencies = [
+  "torch",
+  "numpy",
+  "pandas",
+  "pillow",
+  "transformers",
+  "tqdm",
+  "pyyaml",
+  "pyarrow",
+  "mlflow",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov",
+  "mypy",
+  "ruff",
+  "pylint",
+  "types-PyYAML",
+]
+
+[project.scripts]
+qwen-auto-qc = "qwen_auto_qc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["qwen_auto_qc*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--basetemp=pytest_tmp -p no:cacheprovider"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 88
+src = ["qwen_auto_qc", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B008"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.11"
+mypy_path = "."
+packages = ["qwen_auto_qc"]
+ignore_missing_imports = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+strict_optional = true
+
+[tool.pylint.main]
+py-version = "3.11"
+fail-under = 8.0
+jobs = 1
+
+[tool.pylint."messages control"]
+disable = [
+  "missing-module-docstring",
+  "missing-class-docstring",
+  "missing-function-docstring",
+  "too-few-public-methods",
+]

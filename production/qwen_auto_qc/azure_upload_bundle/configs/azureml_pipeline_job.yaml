@@ -1,0 +1,115 @@
+$schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
+type: pipeline
+display_name: qwen-auto-qc-dag
+experiment_name: qwen_auto_qc
+settings:
+  default_compute: azureml:${AUTOQC_AZUREML_COMPUTE}
+  force_rerun: true
+
+inputs:
+  images_path:
+    type: uri_folder
+    path: azureml:${AUTOQC_AZUREML_IMAGES_DATA_ASSET}:latest
+  labels_path:
+    type: uri_folder
+    path: azureml:${AUTOQC_AZUREML_LABELS_DATA_ASSET}:latest
+  inference_mode:
+    type: string
+    default: without_red_rectangle
+  model_path:
+    type: string
+    default: qwen-vl-4b
+
+outputs:
+  evaluation_report:
+    type: uri_folder
+
+jobs:
+  prepare_data:
+    type: command
+    component:
+      type: command
+      is_deterministic: false
+      code: ..
+      environment: azureml:${AUTOQC_AZUREML_ENVIRONMENT}:latest
+      inputs:
+        images_path:
+          type: uri_folder
+        labels_path:
+          type: uri_folder
+      outputs:
+        prepared_data:
+          type: uri_folder
+      command: >-
+        python scripts/azure/prepare_pipeline_inputs.py
+        --images-path ${{inputs.images_path}}
+        --labels-path ${{inputs.labels_path}}
+        --output-dir ${{outputs.prepared_data}}
+    inputs:
+      images_path: ${{parent.inputs.images_path}}
+      labels_path: ${{parent.inputs.labels_path}}
+    outputs:
+      prepared_data:
+        type: uri_folder
+
+  run_inference:
+    type: command
+    component:
+      type: command
+      is_deterministic: false
+      code: ..
+      environment: azureml:${AUTOQC_AZUREML_ENVIRONMENT}:latest
+      inputs:
+        prepared_data:
+          type: uri_folder
+        images_path:
+          type: uri_folder
+        labels_path:
+          type: uri_folder
+        inference_mode:
+          type: string
+        model_path:
+          type: string
+      outputs:
+        inference_output:
+          type: uri_folder
+      command: >-
+        PYTHONPATH=. python scripts/azure/run_pipeline_inference.py
+        --config configs/azureml.yaml
+        --prepared-inputs ${{inputs.prepared_data}}/prepared_inputs.json
+        --images-path ${{inputs.images_path}}
+        --labels-path ${{inputs.labels_path}}
+        --model-path ${{inputs.model_path}}
+        --inference-mode ${{inputs.inference_mode}}
+        --output-dir ${{outputs.inference_output}}
+    inputs:
+      prepared_data: ${{parent.jobs.prepare_data.outputs.prepared_data}}
+      images_path: ${{parent.inputs.images_path}}
+      labels_path: ${{parent.inputs.labels_path}}
+      inference_mode: ${{parent.inputs.inference_mode}}
+      model_path: ${{parent.inputs.model_path}}
+    outputs:
+      inference_output:
+        type: uri_folder
+
+  evaluate:
+    type: command
+    component:
+      type: command
+      is_deterministic: false
+      code: ..
+      environment: azureml:${AUTOQC_AZUREML_ENVIRONMENT}:latest
+      inputs:
+        inference_output:
+          type: uri_folder
+      outputs:
+        evaluation_output:
+          type: uri_folder
+      command: >-
+        python scripts/azure/evaluate_pipeline_run.py
+        --inference-output ${{inputs.inference_output}}
+        --output-dir ${{outputs.evaluation_output}}
+    inputs:
+      inference_output: ${{parent.jobs.run_inference.outputs.inference_output}}
+    outputs:
+      evaluation_output: ${{parent.outputs.evaluation_report}}

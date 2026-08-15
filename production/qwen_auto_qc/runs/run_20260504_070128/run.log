@@ -1,0 +1,2 @@
+{"event": "run_start", "run_id": "run_20260504_070128", "sample_count": 0, "inference_mode": "without_red_rectangle"}
+{"event": "run_summary", "run_id": "run_20260504_070128", "total_samples": 0, "flagged_samples": 0, "error_rate": 0.0, "mean_latency_ms": 0.0}

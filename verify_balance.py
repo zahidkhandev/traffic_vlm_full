@@ -1,0 +1,53 @@
+from collections import Counter
+
+import matplotlib.pyplot as plt
+import torch
+from tqdm import tqdm
+
+from config.dataset_config import DatasetConfig
+from data.data_loader import get_dataloader
+
+
+def verify_dataloader_balance():
+    print("Initializing Train Loader...")
+    train_loader = get_dataloader(
+        split_name="train",
+        batch_size=64,
+        num_workers=4,
+        shuffle=False,
+    )
+
+    print(f"Checking {len(train_loader)} batches...")
+
+    all_labels = []
+
+    for batch in tqdm(train_loader, desc="Scanning Batches"):
+        labels = batch["label"].tolist()
+        all_labels.extend(labels)
+
+    total_samples = len(all_labels)
+    counts = Counter(all_labels)
+
+    cfg = DatasetConfig()
+    id_to_name = {v: k for k, v in cfg.label_map.items()}
+
+    print(f"\n{'=' * 60}")
+    print("EFFECTIVE TRAINING DISTRIBUTION (What the model sees)")
+    print(f"{'=' * 60}")
+    print(f"{'Class ID':<10} {'Class Name':<20} {'Count':<10} {'Percentage':<10}")
+    print(f"{'-' * 60}")
+
+    for class_id in sorted(id_to_name.keys()):
+        count = counts.get(class_id, 0)
+        percentage = (count / total_samples) * 100
+        name = id_to_name[class_id]
+        print(f"{class_id:<10} {name:<20} {count:<10} {percentage:.2f}%")
+
+    print(f"{'=' * 60}\n")
+
+    ideal_pct = 100 / len(id_to_name)
+    print(f"Ideal Balanced Percentage: ~{ideal_pct:.2f}% per class")
+
+
+if __name__ == "__main__":
+    verify_dataloader_balance()

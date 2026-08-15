@@ -1,0 +1,19 @@
+model_path: qwen-vl-4b
+images_path: ${AUTOQC_AZUREML_IMAGES_PATH}
+labels_path: ${AUTOQC_AZUREML_LABELS_PATH}
+output_root: outputs/qwen_auto_qc
+checkpoint_root: outputs/qwen_auto_qc/checkpoints
+device: cuda
+torch_dtype: auto
+checkpoint_every: 20
+min_box_size: 10
+debug: false
+save_debug_images: false
+use_grounding: true
+mlflow:
+  enabled: true
+  tracking_uri: ${MLFLOW_TRACKING_URI}
+  experiment_name: qwen_auto_qc
+  tags:
+    algorithm: qwen_full_image_grounding
+    platform: azureml

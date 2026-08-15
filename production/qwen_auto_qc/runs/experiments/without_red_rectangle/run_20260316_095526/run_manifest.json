@@ -1,0 +1,18 @@
+{
+  "run_id": "run_20260316_095526",
+  "created_at_utc": "2026-03-16T10:12:12.150721+00:00",
+  "config_hash": "8168a37b6310e76ad2d38a107d7ed88d9622bbcbcad2a8fd00a9d633d8c16223",
+  "previous_run_id": "run_20260316_095321",
+  "changed_config_keys": [],
+  "config_changes": {},
+  "metrics": {
+    "total_samples": 16.0,
+    "flagged_samples": 0.0,
+    "error_rate": 0.0,
+    "mean_latency_ms": 62619.818575000405
+  },
+  "artifact_paths": {
+    "all_samples": "runs\\experiments\\without_red_rectangle\\run_20260316_095526\\all_samples.parquet",
+    "flagged_samples": "runs\\experiments\\without_red_rectangle\\run_20260316_095526\\flagged_samples.parquet"
+  }
+}

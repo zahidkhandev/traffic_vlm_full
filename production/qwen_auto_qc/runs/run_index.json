@@ -1,0 +1,74 @@
+[
+  {
+    "run_id": "run_20260316_103249",
+    "run_dir": "runs\\run_20260316_103249",
+    "inference_mode": "without_red_rectangle",
+    "total_samples": 64,
+    "flagged_samples": 0,
+    "error_rate": 0.0,
+    "mean_latency_ms": 62298.73865312495
+  },
+  {
+    "run_id": "run_20260317_053333",
+    "run_dir": "runs\\run_20260317_053333",
+    "inference_mode": "without_red_rectangle",
+    "total_samples": 64,
+    "flagged_samples": 0,
+    "error_rate": 0.0,
+    "mean_latency_ms": 66650.08381406247
+  },
+  {
+    "run_id": "run_20260318_064503",
+    "run_dir": "runs\\run_20260318_064503",
+    "inference_mode": "without_red_rectangle",
+    "total_samples": 64,
+    "flagged_samples": 4,
+    "error_rate": 0.0625,
+    "mean_latency_ms": 59079.66383281247
+  },
+  {
+    "run_id": "run_20260401_050446",
+    "run_dir": "runs\\run_20260401_050446",
+    "inference_mode": "without_red_rectangle",
+    "total_samples": 64,
+    "flagged_samples": 4,
+    "error_rate": 0.0625,
+    "mean_latency_ms": 68188.51562500003
+  },
+  {
+    "run_id": "run_20260401_090608",
+    "run_dir": "runs\\run_20260401_090608",
+    "inference_mode": "without_red_rectangle",
+    "total_samples": 64,
+    "flagged_samples": 37,
+    "error_rate": 0.578125,
+    "mean_latency_ms": 65846.09363906251
+  },
+  {
+    "run_id": "run_20260504_064653",
+    "run_dir": "runs\\run_20260504_064653",
+    "inference_mode": "without_red_rectangle",
+    "total_samples": 0,
+    "flagged_samples": 0,
+    "error_rate": 0.0,
+    "mean_latency_ms": 0.0
+  },
+  {
+    "run_id": "run_20260504_070128",
+    "run_dir": "runs\\run_20260504_070128",
+    "inference_mode": "without_red_rectangle",
+    "total_samples": 0,
+    "flagged_samples": 0,
+    "error_rate": 0.0,
+    "mean_latency_ms": 0.0
+  },
+  {
+    "run_id": "run_20260504_070344",
+    "run_dir": "runs\\run_20260504_070344",
+    "inference_mode": "without_red_rectangle",
+    "total_samples": 8,
+    "flagged_samples": 7,
+    "error_rate": 0.875,
+    "mean_latency_ms": 62016.09035000001
+  }
+]

@@ -1,0 +1,28 @@
+model_path: ${AUTOQC_MODEL_PATH}
+images_path: ${AUTOQC_IMAGES_PATH}
+labels_path: ${AUTOQC_LABELS_PATH}
+output_root: runs
+checkpoint_root: checkpoints
+device: auto
+torch_dtype: auto
+max_samples: 1
+checkpoint_every: 1
+min_box_size: 10
+debug: false
+console_log_each_object: true
+save_debug_images: false
+use_grounding: true
+inference_mode: without_red_rectangle
+experiment_modes: []
+benchmark_warmup: 1
+benchmark_steps: 3
+generate_visual_artifacts: true
+max_verification_images: 25
+max_error_crops: 100
+mlflow:
+  enabled: false
+  tracking_uri: ""
+  experiment_name: qwen_auto_qc
+  tags:
+    algorithm: qwen_full_image_grounding
+    platform: local
